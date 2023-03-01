@@ -27,7 +27,7 @@ def main():
         
         
     if "I" in test:
-        int n = input()
+        n = input()
         parents = input()
         arr = parents.split(" ")
         arr = numpy.array(arr)
