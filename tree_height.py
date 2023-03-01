@@ -7,7 +7,7 @@ import numpy
 
 def compute_height(n, parents):
     max_height = 0
-    for i in range((int) n):
+    for i in range(int(n)):
         counter = 1
         number = parents[i]
         while not (number == -1):
@@ -27,7 +27,7 @@ def main():
         
         
     if "I" in test:
-        n = input()
+        int n = input()
         parents = input()
         arr = parents.split(" ")
         arr = numpy.array(arr)
