@@ -7,11 +7,11 @@ import numpy
 
 def compute_height(n, parents):
     max_height = 0
-    for i in range(n):
+    for i in range((int) n):
         counter = 1
         number = parents[i]
         while not (number == -1):
-            counter = counter + 1;
+            counter = counter + 1
             number = parents[i]
         max_height = max(max_height, counter)
     return max_height
