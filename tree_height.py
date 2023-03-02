@@ -3,7 +3,7 @@
 import sys
 import threading
 import numpy
-import test 
+from test import * 
 
 
 def compute_height(n, parents):
@@ -24,7 +24,7 @@ def main():
     if "F" in command:
         file_name = input()
         if not "a" in file_name:
-            contents = test.05
+            contents = __init__(file_name)
             print(contents)
         
         
