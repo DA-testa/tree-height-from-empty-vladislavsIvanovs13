@@ -23,7 +23,7 @@ def main():
     #print(test)
     if "F" in command:
         file_name = input()
-        path = "test/" + file_name + ".txt"
+        path = "test/" + file_name
         if not "a" in file_name:
             contents = open(path, "r")
             print(contents.read())
