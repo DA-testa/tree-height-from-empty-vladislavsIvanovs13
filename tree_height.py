@@ -24,8 +24,8 @@ def main():
     if "F" in command:
         file_name = input()
         if not "a" in file_name:
-            contents = __import__(file_name)
-            print(contents)
+            contents = open(file_name, "r")
+            print(contents.read())
         
         
     elif "I" in command:
