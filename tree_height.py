@@ -3,6 +3,7 @@
 import sys
 import threading
 import numpy
+from github import Github
 
 
 def compute_height(n, parents):
@@ -23,8 +24,10 @@ def main():
     if "F" in test:
         file_name = input()
         if not "a" in file_name:
-            #activate test input
-            pass
+            github = Github("vladislavsIvanovs13", "vladislavsIvanovs13")
+            repository = github.get_user().get_repo("tree-height-from-empty-vladislavsIvanovs13")
+            contents = repository.get_contents(file_name)
+            print(contents)
         
         
     elif "I" in test:
