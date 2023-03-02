@@ -23,8 +23,9 @@ def main():
     #print(test)
     if "F" in command:
         file_name = input()
+        path = "test\" + file_name
         if not "a" in file_name:
-            contents = open("test\" + file_name, "r")
+            contents = open(path, "r")
             print(contents.read())
         
         
