@@ -26,7 +26,12 @@ def main():
         path = "test/" + file_name
         if not "a" in file_name:
             contents = open(path, "r")
-            contents.read()
+            text = contents.read()
+            partitioned = text.partition("\n")
+            n = int(partitioned[0])
+            arr = partitioned[2].split(" ")
+            arr = numpy.array(arr)
+            print(compute_height(n, arr))
         
         
     elif "I" in command:
