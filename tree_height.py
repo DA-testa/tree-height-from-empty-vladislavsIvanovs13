@@ -19,16 +19,16 @@ def compute_height(n, parents):
 
 
 def main():
-    test = input()
+    command = input()
     #print(test)
-    if "F" in test:
+    if "F" in command:
         file_name = input()
         if not "a" in file_name:
             contents = test.file_name
             print(contents)
         
         
-    elif "I" in test:
+    elif "I" in command:
         n = int(input())
         parents = input()
         arr = parents.split(" ")
