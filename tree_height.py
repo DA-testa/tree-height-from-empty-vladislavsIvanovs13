@@ -26,7 +26,7 @@ def main():
         path = "test/" + file_name
         if not "a" in file_name:
             contents = open(path, "r")
-            print(contents.read())
+            contents.read()
         
         
     elif "I" in command:
