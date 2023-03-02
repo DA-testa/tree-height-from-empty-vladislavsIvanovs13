@@ -23,7 +23,7 @@ def main():
     if "F" in test:
         file_name = input()
         if not "a" in file_name:
-            #activate test
+            #activate test input
             pass
         
         
