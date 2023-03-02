@@ -24,7 +24,7 @@ def main():
     if "F" in command:
         file_name = input()
         if not "a" in file_name:
-            contents = __init__(file_name)
+            contents = __import__(file_name)
             print(contents)
         
         
