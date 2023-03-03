@@ -25,6 +25,7 @@ def main():
         if not "a" in file_name:
             contents = open(path, "r")
             text = contents.read()
+            contents.close()
             partitioned = text.partition("\n")
             n = int(partitioned[0])
             arr = partitioned[2].split(" ")
