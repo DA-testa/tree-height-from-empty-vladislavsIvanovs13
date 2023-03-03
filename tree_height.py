@@ -7,7 +7,6 @@ import time
 
 
 def compute_height(n, parents):
-    beg = time.time()
     max_height = 0
     for i in numpy.arange(n):
         counter = 1
@@ -16,12 +15,10 @@ def compute_height(n, parents):
             counter += 1
             number = int(parents[number])
         max_height = max(max_height, counter)
-        print(time.time() - beg)
     return max_height
 
 
 def main():
-    start = time.time()
     command = input()
     if "F" in command:
         file_name = input()
@@ -35,7 +32,6 @@ def main():
             arr = partitioned[2].split(" ")
             arr = numpy.array(arr)
             print(compute_height(n, arr))
-            print(time.time() - start)
         
         
     elif "I" in command:
@@ -44,7 +40,6 @@ def main():
         arr = parents.split(" ")
         arr = numpy.array(arr)
         print(compute_height(n, arr))
-        print(time.time() - start)
         
     
     # let user input file name to use, don't allow file names with letter a
