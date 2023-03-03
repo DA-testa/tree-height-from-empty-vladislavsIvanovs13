@@ -3,6 +3,7 @@
 import sys
 import threading
 import numpy
+import time
 
 
 def compute_height(n, parents):
@@ -11,13 +12,14 @@ def compute_height(n, parents):
         counter = 1
         number = int(parents[i])
         while not (number == -1):
-            counter = counter + 1
+            counter += 1
             number = int(parents[number])
         max_height = max(max_height, counter)
     return max_height
 
 
 def main():
+    start = time.time()
     command = input()
     if "F" in command:
         file_name = input()
@@ -31,6 +33,7 @@ def main():
             arr = partitioned[2].split(" ")
             arr = numpy.array(arr)
             print(compute_height(n, arr))
+            print("Time spent: " + (time.time - start))
         
         
     elif "I" in command:
