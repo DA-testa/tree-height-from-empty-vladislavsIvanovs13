@@ -19,7 +19,6 @@ def compute_height(n, parents):
 
 def main():
     command = input()
-    #print(test)
     if "F" in command:
         file_name = input()
         path = "test/" + file_name
