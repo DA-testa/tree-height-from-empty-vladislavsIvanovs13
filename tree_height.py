@@ -15,6 +15,7 @@ def compute_height(n, parents):
             counter += 1
             number = int(parents[number])
         max_height = max(max_height, counter)
+        print(time.time() - start)
     return max_height
 
 
