@@ -43,6 +43,7 @@ def main():
         arr = parents.split(" ")
         arr = numpy.array(arr)
         print(compute_height(n, arr))
+        print(time.time() - start)
         
     
     # let user input file name to use, don't allow file names with letter a
