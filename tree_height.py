@@ -28,17 +28,12 @@ def main():
             contents = open(path, "r")
             text = contents.read()
             contents.close()
-            print(time.time() - start)
             partitioned = text.partition("\n")
-            print(time.time() - start)
             n = int(partitioned[0])
-            print(time.time() - start)
             arr = partitioned[2].split(" ")
-            print(time.time() - start)
             arr = numpy.array(arr)
+            print(compute_height(n, arr))
             print(time.time() - start)
-#             print(compute_height(n, arr))
-#             print(time.time() - start)
         
         
     elif "I" in command:
