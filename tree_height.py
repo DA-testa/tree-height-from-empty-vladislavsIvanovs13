@@ -3,12 +3,11 @@
 import sys
 import threading
 import numpy
-import test
 
 
 def compute_height(n, parents):
     max_height = 0
-    for i in range(n):
+    for i in numpy.arange(n):
         counter = 1
         number = int(parents[i])
         while not (number == -1):
