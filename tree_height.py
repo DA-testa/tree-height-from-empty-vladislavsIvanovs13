@@ -7,6 +7,7 @@ import time
 
 
 def compute_height(n, parents):
+    beg = time.time()
     max_height = 0
     for i in numpy.arange(n):
         counter = 1
@@ -15,7 +16,7 @@ def compute_height(n, parents):
             counter += 1
             number = int(parents[number])
         max_height = max(max_height, counter)
-        print(time.time() - start)
+        print(time.time() - beg)
     return max_height
 
 
