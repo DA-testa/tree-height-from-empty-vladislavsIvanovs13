@@ -32,6 +32,7 @@ def main():
             n = int(partitioned[0])
             arr = partitioned[2].split(" ")
             arr = numpy.array(arr)
+            print(time.time() - start)
             print(compute_height(n, arr))
             print(time.time() - start)
         
