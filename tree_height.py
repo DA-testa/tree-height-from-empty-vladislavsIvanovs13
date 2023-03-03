@@ -33,7 +33,7 @@ def main():
             arr = partitioned[2].split(" ")
             arr = numpy.array(arr)
             print(compute_height(n, arr))
-            print("Time spent: " + (time.time - start))
+            print(time.time - start)
         
         
     elif "I" in command:
