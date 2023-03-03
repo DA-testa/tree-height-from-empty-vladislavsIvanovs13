@@ -37,8 +37,8 @@ def main():
             print(time.time() - start)
             arr = numpy.array(arr)
             print(time.time() - start)
-            print(compute_height(n, arr))
-            print(time.time() - start)
+#             print(compute_height(n, arr))
+#             print(time.time() - start)
         
         
     elif "I" in command:
