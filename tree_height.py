@@ -15,6 +15,7 @@ def compute_height(n, parents):
     return max_height
 
 def compute_possible_heights(i, parents, possible_heights):
+    i = int(i)
     if (parents[i] == -1):
         return 1
     
