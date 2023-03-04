@@ -38,8 +38,7 @@ def main():
             n = int(partitioned[0])
             arr = partitioned[2].split(" ")
             arr = numpy.array(arr)
-            with recursion_depth(10**7):
-                print(compute_height(n, arr))
+            print(compute_height(n, arr))
         
         
     elif "I" in command:
@@ -47,8 +46,7 @@ def main():
         parents = input()
         arr = parents.split(" ")
         arr = numpy.array(arr)
-        with recursion_depth(10**7):
-            print(compute_height(n, arr))
+        print(compute_height(n, arr))
         
     
     # let user input file name to use, don't allow file names with letter a
@@ -61,8 +59,8 @@ def main():
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
 # of bigger stack, we have to launch the computation in a new thread.
-# sys.setrecursionlimit(10**7)  # max depth of recursion
-# threading.stack_size(2**27)   # new thread will get stack of such size
-# threading.Thread(target=main).start()
+sys.setrecursionlimit(10**7)  # max depth of recursion
+threading.stack_size(2**27)   # new thread will get stack of such size
+threading.Thread(target=main).start()
 main()
 # print(numpy.array([1,2,3]))
