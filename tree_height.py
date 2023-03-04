@@ -19,6 +19,7 @@ def compute_height(n, parents):
                 break
             height += 1
             i = int(parents[i])
+        possible_heights[i] = height
         max_height = max(max_height, possible_heights[i])
     return max_height
 
