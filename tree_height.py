@@ -11,7 +11,7 @@ def compute_height(n, parents):
     for i in numpy.arange(n):
         height = 0
         while True:
-            if parents[i] == -1:
+            if (parents[i] == -1):
                 height += 1
                 break
             if (possible_heights[i] != 0):
