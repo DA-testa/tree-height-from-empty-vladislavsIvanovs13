@@ -10,19 +10,18 @@ def compute_height(n, parents):
     max_height = 0
     for i in numpy.arange(n):
         height = 0
-        while True:
-            if (parents[i] == -1):
-                height += 1
-                break
-            if (possible_heights[i] != 0):
-                height += possible_heights[i]
-                break
-            height += 1
-            i = int(parents[i])
-        possible_heights[i] = height
-        max_height = max(max_height, possible_heights[i])
+        possible_heights[i] = compute_possible_heights(i, parents, possible_heights)
+        height = max(max_height, possible_heights[i])
     return max_height
 
+def compute_possible_heights(i, parents, possible_heights):
+    if (parents[i] == -1):
+        return 1
+    
+    if not (possible_heights[i] == 0):
+        return possible_heights[i]
+    
+    return (1 + compute_possible_heights(parents[i], parents, possible_heights))
 
 def main():
     command = input()
