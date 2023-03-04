@@ -5,7 +5,7 @@ import numpy
 def compute_height(n, parents):
     possible_heights = [0 for i in range(n)]
     max_height = 0
-    for i in range(n):
+    for i in numpy.arange(n):
         height = 0
         j = i
         while not (int(parents[j]) == -1):
