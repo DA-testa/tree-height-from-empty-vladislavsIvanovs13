@@ -8,11 +8,8 @@ def compute_height(n, parents):
     possible_heights = [0 for i in range(n)]
     max_height = 0
     for i in range(n):
-        height = 0
-        while True:
-            if (parents[i] == -1):
-                height += 1
-                break
+        height = 1
+        while not (parents[i] == -1):
             if (possible_heights[i] != 0):
                 height += possible_heights[i]
                 break
