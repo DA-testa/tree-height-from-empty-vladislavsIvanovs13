@@ -5,9 +5,9 @@ import threading
 import numpy
 
 def compute_height(n, parents):
-    possible_heights = [0 for i in numpy.arange(n)]
+    possible_heights = [0 for i in range(n)]
     max_height = 0
-    for i in numpy.arange(n):
+    for i in range(n):
         height = 0
         while True:
             if (parents[i] == -1):
