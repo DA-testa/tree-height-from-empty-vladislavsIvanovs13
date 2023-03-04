@@ -3,18 +3,23 @@
 import sys
 import threading
 import numpy
-import time
 
 
 def compute_height(n, parents):
+    possible_heights = [0 for i in numpy.arange(n)]
     max_height = 0
     for i in numpy.arange(n):
-        counter = 1
-        number = int(parents[i])
-        while not (number == -1):
-            counter += 1
-            number = int(parents[number])
-        max_height = max(max_height, counter)
+        height = 0
+        while True:
+            if parents[i] == -1:
+                height += 1
+                break
+            if (possible_heights[i] != 0):
+                height += possible_heights[i]
+                break
+            height += 1
+            i = int(parents[i])
+        max_height = max(max_height, possible_heights[i])
     return max_height
 
 
